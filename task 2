@@ -1,0 +1,24 @@
+#Python code :
+
+#Gives output of all armstorng numbers upto a given number inckuding it
+#takes input of n
+
+n = input('Enter an integer:')
+n = int(n)
+armstrong =[]
+print('In the range of {} and {} including both\n'.format(1,n))
+
+#Loops runs for 1 to n (inclusive 1 and n)
+
+for num in range (1,n+1):
+    arm = 0
+    power = len(str(num))
+    #Logic of checking whether a number is armstrong or not
+    
+    for digit in str(num):
+        arm += int(digit)**power
+    if num == arm:
+        armstrong.append(arm)
+    else: pass
+    
+print('{} are armstrong numbers'.format(armstrong))
