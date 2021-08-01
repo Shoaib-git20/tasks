@@ -1,0 +1,25 @@
+#Finds Maximum contigious sub Array sum of Given Array
+
+#takes input of size of array
+n = int( input('Enter the size of the array:') )
+
+#declaring usefull variables
+List = []
+Max_array = []
+Sum = 0
+
+#Loop will take a element and add it to array and simultanously check it for maximum sum 
+for pos in range(0,n):
+    element = int(input('Enter {} element:'.format(pos+1)))
+    List.append(element)
+    if element>=0:
+        Sum += element
+    elif element < 0 and (Sum + element > 0):
+        Max_array.append(Sum)
+        Sum += element
+    else: Sum = 0
+    if pos == n-1:
+        Max_array.append(Sum)
+        
+print('\nYour array is : {}'.format(List))
+print('Maximum subarray sum is {}'.format(max(Max_array)) )
