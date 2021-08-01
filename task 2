@@ -1,6 +1,6 @@
 #Python code :
 
-#Gives output of all armstorng numbers upto a given number inckuding it
+#Gives output of all armstorng numbers upto a given number including it
 #takes input of n
 
 n = input('Enter an integer:')
